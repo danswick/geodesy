@@ -28,6 +28,29 @@
   font-family: serif;
   font-style: italic;
 }
+.deviation {
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Geoid_height_red_blue.png/640px-Geoid_height_red_blue.png);
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  background-color: #fff;
+}
+.cartesian {
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/0/0e/Cartesian-coordinate-system.svg);
+  background-repeat: no-repeat;
+  background-position: center 25px;
+  background-color: #fff;
+  color: #111;
+}
+.hill {
+  background-image: url(http://s3.amazonaws.com/rapgenius/1359520868_solsbury_hill.jpg);
+  background-repeat: no-repeat;
+  background-position: center 25px;
+}
+.gauss {
+  background-image: url(http://upload.wikimedia.org/wikipedia/commons/9/9b/Carl_Friedrich_Gauss.jpg);
+  background-repeat: no-repeat;
+  background-position: center 25px;
+}
 
 </style>
 <script src='big.js'></script>
@@ -52,8 +75,48 @@
 <div>But the <em>lack of uniformity</em> makes it hard to use as a <strong>reference for measurement.</strong></div>
 <div>Enter the <em>reference ellipsoid</em>.</div>
 <div data-bodyclass="ellipsoid">or <br><br>"oblate ellipsoid."</div>
-<div>The <strong>reference ellipsoid</strong> is <em>mathematically defined.</em></div>
-<div data-bodyclass="math">f = <br>(a - b) / a</div>
+<div>The <strong>reference ellipsoid</strong> is <em>mathematically defined:</em> you can read more about that <a href="http://en.wikipedia.org/wiki/Reference_ellipsoid">here</a>.</div>
+<div>The <strong>important</strong> part is that the <em>short (polar) axis</em> is roughly aligned with the <em>rotation axis</em> of the Earth.</div>
+<div data-bodyclass="ellipsoid"></div>
+<div><strong>Why</strong> is it important to have a <em>mathematically defined</em> shape for the Earth?</div>
+<div>Because we, as <strong>cartographers</strong> are engaged in <em>measuring</em> the Earth. We need to know <strong>what goes where.</strong></div>
+<div><em>Hooray!</em> Now we get to talk about <strong>coordinate systems</strong> and <strong>datums!</strong></div>
+<div>So we now know that the <em>reference ellipsoid</em> for Earth is a <strong>significant approximation</strong> of the <em>geoid</em>, which is itself a <strong>significant approximation</strong> of the <em>real shape</em> of the Earth.</div>
+<div data-bodyclass="deviation"></div>
+<div>But the <em>reference ellipsoid</em> is <strong>super helpful</strong> to us when it comes to knowing <em>where things are</em> in <strong>relation</strong> to each other.</div>
+<div>It enables the creation of a <strong>geodetic datum</strong>: a <em>coordinate system</em> and set of <em>reference points</em> that are used to locate places on the Earth.</div>
+<div>A <strong>datum</strong> provides <em>starting points</em> for measurement.</div>
+<div><em>Horizontal</em> datums measure positions on the <strong>Earth's surface.</strong> <em>Vertical</em> datums measure <strong>elevations</strong>.</div>
+<div>Let's <em>walk through</em> an example.</div>
+<div>You and I are standing just to the left of this hill.</div>
+<div data-bodyclass="hill"></div>
+<div><em>You</em> are walking up the hill. <em>I</em> am walking next to the hill.</div>
+<div>We each take <strong>fifteen</strong> steps forward.</div>
+<div data-bodyclass="hill"></div>
+<div>If you look at the <em>photo</em>, I am closer to the <strong>right</strong> side of the photo than you are.</div>
+<div>We tend to think about <em>measuring space</em> in a <strong>Cartesian</strong> fashion.</div>
+<div data-bodyclass="cartesian">Cartesian coordinate system</div>
+<div>But <em>remember:</em> the Earth is <strong>three-dimensional</strong> and <strong>lumpy,</strong> even in the <em>reference ellipsoid.</em></div>
+<div>If you looked at our <em>relative positions</em> on and next to the hill from <strong>above</strong>, it will seem as though I <em>traveled further.</em></div>
+<div>But I <em>didn't.</em></div>
+<div>A <strong>datum</strong> takes this into account and makes a <em>coordinate system</em> that reflects it.</div>
+<div>The <a href="http://geodesy.noaa.gov">National Geodetic Survey</a> manages the US's <em>national datums</em>: <a href="http://en.wikipedia.org/wiki/NAD83#North_American_Datum_of_1983">NAD83</a> and <a href="http://en.wikipedia.org/wiki/NAVD88">NAVD88</a>.
+<div>There are <strong>many different</strong> datums that refer to <strong>many different</strong> reference ellipsoids.</div>
+<div>For example, a datum may <strong>define a location</strong> for the <em>Equator</em>, but that location may be <strong>different</strong> for a <em>different datum.</em></div>
+<div><em>Why?</em></div>
+<div>Because, again, of the <strong>irregular shape</strong> of the Earth.</div>
+<div>Some <em>ellipsoids</em> are better for <strong>certain areas</strong>.</div>
+<div>One <em>popular</em> datum is <a href="http://en.wikipedia.org/wiki/World_Geodetic_System">WGS84</a>, or the <strong>World Geodetic System of 1984.</div>
+<div>This is the <strong>datum</strong> that is used by the <em>Global Positioning System (GPS)</em>.</div>
+<div>Going back to the <strong>hill</strong> example...</div>
+<div data-bodyclass="hill"></div>
+<div>If I used my <em>GPS</em> to get to a <strong>point</strong> on the other side of the hill, it would give me <strong>different</strong> directions if I was going <em>over</em> the hill than if I was going <em>beside</em> the hill.</div>
+<div>Using <strong>WGS84</strong>, it knows the relationship between <em>distance on the earth</em> and <strong>relative location</strong>.</div>
+<div>But even if there <em>wasn't</em> a hill, this would still be <strong>necessary.</strong> Why?</div>
+<div>Because <em>the Earth is three-dimensional.</em></div>
+<div>All of this creates <strong>another need</strong> for cartographers:</div>
+<div><em>PROJECTIONS!</em></div>
+<div>Let's talk about <strong>Gauss</strong>, baby.</div>
 
 
 
